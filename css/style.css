@@ -95,9 +95,24 @@ a{
 .form-control{
     font-size: 0.8rem;
 }
+
+.contact{
+    display: flex;
+    align-items: center;
+    height: 50px;
+    border-bottom: 1px solid #e9ebeb ;
+}
     
+.user{
+    font-size: 0.7rem;
+    display: flex;
+    flex-direction: column;
+    margin-left: 5px;
+}
 
-
+.cont-mic{
+    background-color: #e9ebeb;
+}
 
 
 
