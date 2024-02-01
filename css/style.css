@@ -59,6 +59,46 @@ header{
     height: 550px;
 }
 
+.new-message{
+    background-color: #8edafc;
+    height: 60px;
+    display: flex;
+    align-items: center;
+}
+
+.bell{
+    background-color: #ffffff;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 10px;
+}
+
+.fa-bell-slash{
+    color: #8edafc;
+}
+
+.not{
+    font-size: 0.7rem;
+    display: flex;
+    flex-direction: column;
+    margin-left: 5px;
+}
+
+a{
+    color: #767474;
+}
+
+.form-control{
+    font-size: 0.8rem;
+}
+    
+
+
+
 
 
 
@@ -81,6 +121,7 @@ main{
 .cont-main{
     background-image: url(../img/mine.jpg);
     height: 500px;
+    font-size: 0.8rem;
 }
 
 .right{
@@ -111,11 +152,6 @@ main{
     border-radius: 8px;
 }
 
-
-
-
-
-
 .cont-footer{
     height: 50px;
     background-color: #f3eeea;
@@ -128,7 +164,7 @@ main{
     align-items: center;
 }
 
-input{
+.text{
     height: 40px;
     width: 500px;
 }
