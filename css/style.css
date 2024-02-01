@@ -16,18 +16,20 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-top: 50px;
 }
 
 header{
-    border: 5px solid red;
     height: 600px;
     width: calc(950px / 2);
 }
 
 .cont-header{
     background-color: #eaeaea;
+    height: 50px;
     display: flex;
     justify-content: space-between;
+    padding: 0 10px;
 }
 
 .avatar{
@@ -36,8 +38,8 @@ header{
 }
 
 .image{
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
     display: block;
 }
 
@@ -46,6 +48,16 @@ header{
     border-radius: 50%;
 }
 
+.icon{
+    color: #b1b1b1;
+    display: flex;
+    align-items: center;
+}
+
+.head-main{
+    background-color: #ffffff;
+    height: 550px;
+}
 
 
 
@@ -56,7 +68,24 @@ header{
 
 
 main{
-    border: 3px solid green;
     height: 600px;
-    width: calc(950px / 2);
+    width: 950px;
+}
+
+.time{
+    font-size: 0.6rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.cont-main{
+    background-image: url(../img/mine.jpg);
+    height: 500px;
+}
+
+
+
+.cont-footer{
+    height: 50px;
+    background-color: #f3eeea;
 }
