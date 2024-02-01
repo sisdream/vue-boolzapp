@@ -11,12 +11,12 @@ body{
 }
 
 .container{
-    height: 600px;
+    height: 700px;
     width: 950px;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 50px;
+    margin-top: 40px;
 }
 
 header{
@@ -104,7 +104,6 @@ main{
     margin-left: 30px;
 }
 
-
 .envoy{
     background-color: #ffffff;
     width: 200px;
@@ -120,4 +119,16 @@ main{
 .cont-footer{
     height: 50px;
     background-color: #f3eeea;
+    display: flex;
+    justify-content: space-between;
+}
+
+.message{
+    display: flex;
+    align-items: center;
+}
+
+input{
+    height: 40px;
+    width: 500px;
 }
