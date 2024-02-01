@@ -127,12 +127,6 @@ main{
     width: 950px;
 }
 
-.time{
-    font-size: 0.6rem;
-    display: flex;
-    flex-direction: column;
-}
-
 .cont-main{
     background-image: url(../img/mine.jpg);
     height: 500px;
