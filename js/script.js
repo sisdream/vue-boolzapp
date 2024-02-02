@@ -165,7 +165,18 @@ const app = createApp({
                     ],
                 },
             ]
-        }; 
+        };
+    },
+    selectedContact: 0,
+    newChatMessage: {
+        date: "",
+        message: "",
+        status: "sent",
+    },
+    methods: {
+        selectContact(index) {
+          this.selectedContact = index;
+        },
     },
 });app.mount('#app');
 

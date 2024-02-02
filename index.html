@@ -48,7 +48,7 @@
                         <input type="text" class="form-control" placeholder="Cerca o inizia una nuova chat" aria-label="Username" aria-describedby="basic-addon1">
                     </div>
     
-                    <div  class="contact cont-mic">
+                    <div v-for="(contact, index) in contacts"   class="contact cont-mic">
                         <div class="avatar">
                             <span class="image ms-2">
                                 <img src="./img/avatar_1.jpg" alt="Michele">
@@ -56,98 +56,7 @@
                         </div>
     
                         <span class="user">
-                            <p class="mb-0 fst-italic">Michele</p>
-                            <p class="mb-0">Ultimo messaggio inviato</p>
-                        </span>
-                    </div>
-    
-                    <div class="contact">
-                        <div class="avatar">
-                            <span class="image ms-2">
-                                <img src="./img/avatar_2.jpg" alt="Fabio">
-                            </span>
-                        </div>
-    
-                        <span class="user">
-                            <p class="mb-0 fst-italic">Fabio</p>
-                            <p class="mb-0">Ultimo messaggio inviato</p>
-                        </span>
-                    </div>
-    
-                    <div class="contact">
-                        <div class="avatar">
-                            <span class="image ms-2">
-                                <img src="./img/avatar_3.jpg" alt="Samuele">
-                            </span>
-                        </div>
-    
-                        <span class="user">
-                            <p class="mb-0 fst-italic">Samuele</p>
-                            <p class="mb-0">Ultimo messaggio inviato</p>
-                        </span>
-                    </div>
-    
-                    <div class="contact">
-                        <div class="avatar">
-                            <span class="image ms-2">
-                                <img src="./img/avatar_4.jpg" alt="Alessandro B.">
-                            </span>
-                        </div>
-    
-                        <span class="user">
-                            <p class="mb-0 fst-italic">Alessandro B.</p>
-                            <p class="mb-0">Ultimo messaggio inviato</p>
-                        </span>
-                    </div>
-    
-                    <div class="contact">
-                        <div class="avatar">
-                            <span class="image ms-2">
-                                <img src="./img/avatar_5.jpg" alt="Alessandro L.">
-                            </span>
-                        </div>
-    
-                        <span class="user">
-                            <p class="mb-0 fst-italic">Alessandro L.</p>
-                            <p class="mb-0">Ultimo messaggio inviato</p>
-                        </span>
-                    </div>
-    
-                    <div class="contact">
-                        <div class="avatar">
-                            <span class="image ms-2">
-                                <img src="./img/avatar_6.jpg" alt="Claudia">
-                            </span>
-                        </div>
-    
-                        <span class="user">
-                            <p class="mb-0 fst-italic">Claudia</p>
-                            <p class="mb-0">Ultimo messaggio inviato</p>
-                        </span>
-                    </div>
-    
-                    <div class="contact">
-                        <div class="avatar">
-                            <span class="image ms-2">
-                                <img src="./img/avatar_7.jpg" alt="Federico">
-                            </span>
-                        </div>
-    
-                        <span class="user">
-                            <p class="mb-0 fst-italic">Federico</p>
-                            <p class="mb-0">Ultimo messaggio inviato</p>
-                        </span>
-                    </div>
-    
-                    <div class="contact">
-                        <div class="avatar">
-                            <span class="image ms-2">
-                                <img src="./img/avatar_8.jpg" alt="Davide">
-                            </span>
-                        </div>
-    
-                        <span class="user">
-                            <p class="mb-0 fst-italic">Davide</p>
+                            <p class="mb-0 fst-italic">{{ contact.name }} </p>
                             <p class="mb-0">Ultimo messaggio inviato</p>
                         </span>
                     </div>
@@ -162,7 +71,7 @@
                         </span>
     
                         <span class="user ">
-                            <div class="fst-italic">Michele</div>
+                            <div v-for="(contact, index) in contacts" class="fst-italic">{{ contact.name }}</div>
                             <p class="mb-0">Ultimo accesso oggi alle 12:00</p>
                         </span>
                     </div>
