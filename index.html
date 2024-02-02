@@ -53,12 +53,15 @@
                             <span class="image ms-2">
                                 <img :src="contact.avatar"  alt="contact.name">
                             </span>
+                            <span class="user">
+                                <p class="mb-0 fst-italic">{{ contact.name }} </p>
+                                <p class="mb-0">Ultimo messaggio inviato</p>
+                            </span>
                         </div>
     
-                        <span class="user">
-                            <p class="mb-0 fst-italic">{{ contact.name }} </p>
-                            <p class="mb-0">Ultimo messaggio inviato</p>
-                        </span>
+                        <div class="time">
+                           <p>{{ lastAccessMessages(contact.messages) }}</p>
+                        </div>
                     </div>
                 </section>
             </header>

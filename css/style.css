@@ -6,8 +6,7 @@
 
 body{
     font-family: 'Lato', sans-serif;
-    background-color: #d5dbd8;
-    background-image: linear-gradient(#009688 0px, #009688 20vh, #d5dbd8 20vh, #d5dbd8 100vh)
+    background-image: linear-gradient(#009688 0px, #009688 15vh, #d5dbd8 15vh, #d5dbd8 100vh)
 }
 
 .container{
@@ -97,7 +96,6 @@ a{
 }
 
 .contact{
-    display: flex;
     align-items: center;
     height: 50px;
     border-bottom: 1px solid #e9ebeb ;
@@ -107,13 +105,19 @@ a{
     font-size: 0.7rem;
     display: flex;
     flex-direction: column;
-    margin-left: 5px;
 }
 
 .cont-mic{
     background-color: #e9ebeb;
+    display: flex;
+    justify-content: space-between;
 }
 
+.time{
+    display: flex;
+    font-size: 0.5rem;
+    margin-right: 5px;
+}
 
 
 

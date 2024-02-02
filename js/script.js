@@ -7,7 +7,7 @@ const app = createApp({
                     name: "Michele",
                     avatar: "./img/avatar_1.jpg",
                     visible: true,
-                    message: [
+                    messages: [
                         {
                             date: "10/01/2020 15:30:55",
                             message: "Hai portato a spasso il cane?",
@@ -29,7 +29,7 @@ const app = createApp({
                     name: "Fabio",
                     avatar: "./img/avatar_2.jpg",
                     visible: true,
-                    message: [
+                    messages: [
                         {
                             date: "20/03/2020 16:30:00",
                             message: "Ciao, come stai?",
@@ -51,7 +51,7 @@ const app = createApp({
                     name: "Samuele",
                     avatar: "./img/avatar_3.jpg",
                     visible: true,
-                    message: [
+                    messages: [
                         {
                             date: "28/03/2020 10:10:40",
                             message: "La Marianna va in campagna",
@@ -73,7 +73,7 @@ const app = createApp({
                     name: "Alessandro B.",
                     avatar: "./img/avatar_4.jpg",
                     visible: true,
-                    message: [
+                    messages: [
                         {
                             date: "10/01/2020 15:30:55",
                             message: "Lo sai che ha aperto una nuova pizzeria?",
@@ -90,7 +90,7 @@ const app = createApp({
                     name: "Alessandro L.",
                     avatar: "./img/avatar_5.jpg",
                     visible: true,
-                    message: [
+                    messages: [
                         {
                             date: "10/01/2020 15:30:55",
                             message: "Ricordati di chiamare la nonna",
@@ -107,7 +107,7 @@ const app = createApp({
                     name: "Claudia",
                     avatar: "./img/avatar_6.jpg",
                     visible: true,
-                    message: [
+                    messages: [
                         {
                             date:  "10/01/2020 15:30:55",
                             message: "Ciao Claudia, hai novità?",
@@ -129,7 +129,7 @@ const app = createApp({
                     name: "Federico",
                     avatar: "./img/avatar_7.jpg",
                     visible: true,
-                    message: [
+                    messages: [
                         {
                             date:  "10/01/2020 15:30:55",
                             message: "Fai gli auguri a Martina che è il suo compleanno!",
@@ -146,7 +146,7 @@ const app = createApp({
                     name: "Davide",
                     avatar: "./img/avatar_8.jpg",
                     visible: true,
-                    message: [
+                    messages: [
                         {
                             date:  "10/01/2020 15:30:55",
                             message: "Ciao, andiamo a mangiare la pizza stasera?",
@@ -174,9 +174,13 @@ const app = createApp({
         status: "sent",
     },
     methods: {
-        selectContact(index) {
-          this.selectedContact = index;
-        },
+       lastAccessMessages(messages){
+            const sentAccess = messages.filter((message) => {
+                return message.status == "sent";
+            });
+            const lastAccess = sentAccess[sentAccess.length -1];
+            return lastAccess.date;
+       },
     },
 });app.mount('#app');
 
