@@ -1,8 +1,7 @@
-const boolApp = new Vue(
-    {
-        el: "#app",
-        data: {
-
+const { createApp } = Vue;
+const app = createApp({
+    data(){
+        return{
             contacts: [
                 {
                     name: "Michele",
@@ -166,11 +165,8 @@ const boolApp = new Vue(
                     ],
                 },
             ]
-        },
-
-    }
-)
-
-
+        }; 
+    },
+});app.mount('#app');
 
 
