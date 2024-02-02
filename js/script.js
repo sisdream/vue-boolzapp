@@ -164,23 +164,27 @@ const app = createApp({
                         }, 
                     ],
                 },
-            ]
+            ],
+            selectIndex: 0,
         };
     },
-    selectedContact: 0,
-    newChatMessage: {
-        date: "",
-        message: "",
-        status: "sent",
+    computed: {
+        selectContact(){
+            
+        }
     },
     methods: {
        lastAccessMessages(messages){
             const sentAccess = messages.filter((message) => {
                 return message.status == "sent";
             });
-            const lastAccess = sentAccess[sentAccess.length -1];
+            const lastAccess = sentAccess.at(-1);
             return lastAccess.date;
        },
+       lastMessages(messages){
+            const lastMessage = messages.at(-1);
+            return lastMessage.message;
+        },
     },
 });app.mount('#app');
 

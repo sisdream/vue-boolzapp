@@ -54,8 +54,8 @@
                                 <img :src="contact.avatar"  alt="contact.name">
                             </span>
                             <span class="user">
-                                <p class="mb-0 fst-italic">{{ contact.name }} </p>
-                                <p class="mb-0">Ultimo messaggio inviato</p>
+                                <p class="user-name mb-0 fst-italic">{{ contact.name }} </p>
+                                <p class="mb-0">{{ lastMessages(contact.messages) }}</p>
                             </span>
                         </div>
     
@@ -70,12 +70,12 @@
                 <div class="cont-header">
                     <div class="avatar">
                         <span class="image">
-                            <img src="./img/avatar_1.jpg" alt="Michele">
+                            <img :src="contacts[selectIndex].avatar" alt="Michele">
                         </span>
     
                         <span class="user ">
-                            <div v-for="(contact, index) in contacts" class="fst-italic">{{ contact.name }}</div>
-                            <p class="mb-0">Ultimo accesso oggi alle 12:00</p>
+                            <div class="user-name fst-italic">{{contacts[selectIndex].name}}</div>
+                            <p class="mb-0">Ultimo accesso {{lastAccessMessages(contacts[selectIndex].messages)}}</p>
                         </span>
                     </div>
     
