@@ -70,12 +70,12 @@
                 <div class="cont-header">
                     <div class="avatar">
                         <span class="image">
-                            <img :src="contacts[selectIndex].avatar" alt="Michele">
+                            <img :src="selectContact.avatar" alt="Michele">
                         </span>
     
                         <span class="user ">
-                            <div class="user-name fst-italic">{{contacts[selectIndex].name}}</div>
-                            <p class="mb-0">Ultimo accesso {{lastAccessMessages(contacts[selectIndex].messages)}}</p>
+                            <div class="user-name fst-italic">{{selectContact.name}}</div>
+                            <p class="mb-0">Ultimo accesso {{lastAccessMessages(selectContact.messages)}}</p>
                         </span>
                     </div>
     
@@ -87,13 +87,15 @@
                 </div>
     
                 <div class="cont-main">
-                   <div class="right">
-                        <div class="received fst-italic mt-2 p-2">Ciao</div>
-                        <div class="received fst-italic mt-2 p-2">Tutto bene?</div>
-                   </div>
-    
-                   <div class="left">
-                        <div class="envoy fst-italic mt-2 p-2">Abbastanza</div>
+                    <div class="main-message">
+                        <div v-for="message in selectContact.messages" class="mt-2" :class="message.status">
+                            <div class="fst-italic  p-2">
+                                <p class="mb-0">{{ message.message}}</p>
+                                <span class="time rec-time">
+                                    <div>{{ message.date}}</div>
+                                </span>
+                            </div>
+                        </div>
                    </div>
                 </div>
     

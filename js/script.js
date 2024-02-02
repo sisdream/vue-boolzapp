@@ -170,7 +170,7 @@ const app = createApp({
     },
     computed: {
         selectContact(){
-            
+            return this.contacts[this.selectIndex];
         }
     },
     methods: {

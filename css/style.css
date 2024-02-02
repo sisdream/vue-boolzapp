@@ -123,13 +123,6 @@ a{
     margin-right: 5px;
 }
 
-
-
-
-
-
-
-
 main{
     height: 600px;
     width: 950px;
@@ -141,32 +134,29 @@ main{
     font-size: 0.8rem;
 }
 
-.right{
+.main-message{
     display: flex;
     flex-direction: column;
+}
+
+.sent{
+    background-color: #d5f9ba;
+    width: 300px;
+    height: 50px;
+    border-radius: 8px;
     align-items: flex-end;
     margin-right: 30px;
 }
 
-.received{
-    background-color: #d5f9ba;
-    width: 200px;
-    height: 40px;
-    border-radius: 8px;
-}
 
-.left{
-    display: flex;
-    flex-direction: column;
+.received{
+    background-color: #ffffff;
+    width: 300px;
+    height: 50px;
+    border-radius: 8px;
     align-items: flex-start;
     margin-left: 30px;
-}
-
-.envoy{
-    background-color: #ffffff;
-    width: 200px;
-    height: 40px;
-    border-radius: 8px;
+    
 }
 
 .cont-footer{
@@ -184,4 +174,9 @@ main{
 .text{
     height: 40px;
     width: 500px;
+}
+
+.rec-time{
+    display: flex;
+    justify-content: end;
 }
