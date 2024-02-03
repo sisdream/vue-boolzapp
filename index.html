@@ -66,10 +66,11 @@
                                 placeholder="Cerca o inizia una nuova chat"
                                 aria-label="Username"
                                 aria-describedby="basic-addon1"
+                                v-model="searchInput"
                             />
                         </div>
 
-                        <div v-for="(contact, index) in contacts" class="contact" :class="selectIndex === index ? 'active' : ''" @click="handleContactClick(index)">
+                        <div v-for="(contact, index) in filteredContacts" class="contact" :class="selectIndex === index ? 'active' : ''" @click="handleContactClick(index)">
                             <div class="avatar">
                                 <span class="image ms-2">
                                     <img :src="contact.avatar" alt="contact.name" />
