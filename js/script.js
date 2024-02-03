@@ -167,14 +167,18 @@ const app = createApp({
             ],
             selectIndex: 0,
             message: "",
+            searchInput: "",
         };
     },
-    mounted(){
-        console.log(luxon)
-    }, 
     computed: {
         selectContact(){
             return this.contacts[this.selectIndex];
+        },
+        filteredContacts() {
+            return this.contacts.filter((contact) => {
+                const name = contact.name;
+                return name.toUpperCase().includes(this.searchInput.toUpperCase());
+            })
         }
     },
     methods: {
