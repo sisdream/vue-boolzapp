@@ -15,7 +15,7 @@ const app = createApp({
                         },
                         {
                             date: "10/01/2020 15:50:00",
-                            essage: "Ricordati di stendere i panni",
+                            message: "Ricordati di stendere i panni",
                             status: "sent"
                         },
                         {
@@ -168,6 +168,9 @@ const app = createApp({
             selectIndex: 0,
         };
     },
+    mounted(){
+        console.log(luxon)
+    }, 
     computed: {
         selectContact(){
             return this.contacts[this.selectIndex];
@@ -178,14 +181,36 @@ const app = createApp({
             const sentAccess = messages.filter((message) => {
                 return message.status == "sent";
             });
-            const lastAccess = sentAccess.at(-1);
+            const lastAccess = sentAccess.at(-1);         
             return lastAccess.date;
        },
        lastMessages(messages){
             const lastMessage = messages.at(-1);
             return lastMessage.message;
         },
-    },
-});app.mount('#app');
+        handleContactClick(contactIndex) {
+            this.selectIndex = contactIndex;
+        },
+        handleSendMessage(event) {
+            this.contacts[this.selectIndex].messages.push({
+                date: luxon.DateTime.now().toFormat("dd'/'MM'/'yyyy HH':'mm':'ss"),
+                message: event.target.value,
+                status: "sent"
+            })
+            event.target.value = '';
 
+            setTimeout(() => {
+                this.handleReceveiverMessage();
+            }, 1000);
+        },
+        handleReceveiverMessage() {
+            this.contacts[this.selectIndex].messages.push({
+                date: luxon.DateTime.now().toFormat("dd'/'MM'/'yyyy HH':'mm':'ss"),
+                message: 'ok',
+                status: "received"
+            })
+        }
+    },
+});
+app.mount('#app');
 
