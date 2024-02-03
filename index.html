@@ -130,7 +130,7 @@
                         </div>
 
                         <div class="message">
-                            <input class="text" type="text" placeholder="Scrivi un messaggio" @keydown.enter="handleSendMessage" />
+                            <input class="text" type="text" placeholder="Scrivi un messaggio" v-model="message" @keydown.enter="handleSendMessage" />
                         </div>
 
                         <div class="icon">

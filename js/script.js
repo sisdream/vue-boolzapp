@@ -166,6 +166,7 @@ const app = createApp({
                 },
             ],
             selectIndex: 0,
+            message: "",
         };
     },
     mounted(){
@@ -190,6 +191,7 @@ const app = createApp({
         },
         handleContactClick(contactIndex) {
             this.selectIndex = contactIndex;
+            this.message = '';
         },
         handleSendMessage(event) {
             this.contacts[this.selectIndex].messages.push({
@@ -197,7 +199,7 @@ const app = createApp({
                 message: event.target.value,
                 status: "sent"
             })
-            event.target.value = '';
+            this.message = '';
 
             setTimeout(() => {
                 this.handleReceveiverMessage();
