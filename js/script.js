@@ -215,7 +215,13 @@ const app = createApp({
                 message: 'ok',
                 status: "received"
             })
-        }
+        },
+        removeMessage(index) {
+            // this.selectContact.messages.splice(index, 1);
+            this.contacts[this.selectIndex].messages.splice(index, 1);
+            // this.contacts[this.selectContact].messages.splice(index, 1);
+            // console.log("sono qui");
+        },
     },
 });
 app.mount('#app');
